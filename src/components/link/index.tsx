@@ -5,8 +5,8 @@ import { FaGithub, FaTwitter } from 'react-icons/fa'
 const Links = (props: ButtonGroupProps) => {
   return (
     <ButtonGroup variant="ghost" color="glay.600" {...props}>
-      <IconButton as="a" href='#' aria-label="GitHub" icon={<FaGithub fontSize="20px" />} />
-      <IconButton as="a" href='#' aria-label="Twitter" icon={<FaTwitter fontSize="20px" />} />
+      <IconButton _focus={{focus: "none"}} as="a" href='#' aria-label="GitHub" icon={<FaGithub fontSize="20px" />} />
+      <IconButton _focus={{focus: "none"}} as="a" href='#' aria-label="Twitter" icon={<FaTwitter fontSize="20px" />} />
     </ButtonGroup>
   )
 }
