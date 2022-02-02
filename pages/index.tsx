@@ -1,11 +1,10 @@
 import type { NextPage } from 'next'
-import { Container } from '@chakra-ui/react'
 import * as React from 'react'
+import ProfileSection from '../src/components/profile'
 
 const Home: NextPage = () => {
   return (
-    <Container>
-    </Container>
+      <ProfileSection />
   )
 }
 
