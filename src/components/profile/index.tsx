@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Heading, Box, Stack, Text, Image } from '@chakra-ui/react'
+import { Heading, Box, Text, Image } from '@chakra-ui/react'
 import Links from '../link'
 
 const ProfileSection = () => {
