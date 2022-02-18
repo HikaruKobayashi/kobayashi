@@ -1,4 +1,4 @@
-import { IconButton, useColorMode } from '@chakra-ui/react'
+import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 
 const ThemeBtn = () => {
@@ -8,6 +8,7 @@ const ThemeBtn = () => {
       _focus={{focus: "none"}}
       mb={10}
       aria-label="DarkMode Switch"
+      colorScheme={useColorModeValue('purple', 'orange')}
       icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
       onClick={toggleColorMode}
     />
