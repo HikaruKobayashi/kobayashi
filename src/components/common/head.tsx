@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import * as React from 'react'
+import Head from 'next/head';
+import * as React from 'react';
 
 const HomeHead = () => {
   return (
@@ -17,7 +17,7 @@ const HomeHead = () => {
       <meta name="twitter:creator" content="@0719kobayashi" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-  )
-}
+  );
+};
 
-export default HomeHead
+export default HomeHead;

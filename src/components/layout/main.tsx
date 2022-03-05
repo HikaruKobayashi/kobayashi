@@ -1,15 +1,15 @@
-import { Box, Container, ColorModeScript } from '@chakra-ui/react'
-import { ReactNode } from 'react'
-import HomeHead from '../common/head'
-import Header from './header'
-import Footer from './footer'
-import theme from './../../../lib/theme'
+import {Box, Container, ColorModeScript} from '@chakra-ui/react';
+import {ReactNode} from 'react';
+import HomeHead from '../common/head';
+import Header from './header';
+import Footer from './footer';
+import theme from './../../../lib/theme';
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
-const Main = ({ children, ...props }: Props) => {
+const Main = ({children, ...props}: Props) => {
   return (
     <Box as="main">
       <HomeHead />
@@ -20,7 +20,7 @@ const Main = ({ children, ...props }: Props) => {
         <Footer />
       </Container>
     </Box>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

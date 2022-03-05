@@ -1,17 +1,15 @@
-import type { NextPage, GetStaticProps } from 'next'
-import * as React from 'react'
-import BioSection from '../src/components/profile/bio'
+import type {NextPage, GetStaticProps} from 'next';
+import * as React from 'react';
+import BioSection from '../src/components/profile/bio';
 
 const Bio: NextPage = () => {
-  return (
-      <BioSection />
-  )
-}
+  return <BioSection />;
+};
 
-export default Bio
+export default Bio;
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
-    props: {}
-  }
-}
+    props: {},
+  };
+};
