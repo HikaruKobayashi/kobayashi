@@ -8,15 +8,19 @@ const Links = (props: ButtonGroupProps) => {
       <IconButton
         _focus={{focus: 'none'}}
         as="a"
-        href="#"
+        href="https://github.com/HikaruKobayashi"
         aria-label="GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
         icon={<FaGithub fontSize="20px" />}
       />
       <IconButton
         _focus={{focus: 'none'}}
         as="a"
-        href="#"
+        href="https://twitter.com/0719kobayashi"
         aria-label="Twitter"
+        target="_blank"
+        rel="noopener noreferrer"
         icon={<FaTwitter fontSize="20px" />}
       />
     </ButtonGroup>
