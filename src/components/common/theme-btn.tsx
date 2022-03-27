@@ -6,7 +6,6 @@ const ThemeBtn = () => {
   return (
     <IconButton
       _focus={{focus: 'none'}}
-      mb={10}
       aria-label="DarkMode Switch"
       colorScheme={useColorModeValue('purple', 'orange')}
       icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}

@@ -8,7 +8,7 @@ const Links = (props: ButtonGroupProps) => {
       <IconButton
         _focus={{focus: 'none'}}
         as="a"
-        href="https://github.com/HikaruKobayashi"
+        href="https://github.com/HikaruKobayashi/kobayashi"
         aria-label="GitHub"
         target="_blank"
         rel="noopener noreferrer"
