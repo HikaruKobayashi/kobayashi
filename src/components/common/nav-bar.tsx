@@ -12,10 +12,10 @@ const Navbar = () => {
         variant="outline"
       />
       <MenuList>
-        <MenuItem as={Link} href="/">
+        <MenuItem as={Link} href="/" style={{textDecoration: 'none'}}>
           Home
         </MenuItem>
-        <MenuItem as={Link} href="/work">
+        <MenuItem as={Link} href="/work" style={{textDecoration: 'none'}}>
           Work
         </MenuItem>
       </MenuList>
