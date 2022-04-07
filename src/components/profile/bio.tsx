@@ -1,64 +1,30 @@
 import * as React from 'react';
-import {Text, List, ListItem} from '@chakra-ui/react';
+import {Text, List, ListItem, Box, Heading} from '@chakra-ui/react';
 
 const Bio = () => {
   return (
-    <List mt="4" ml="6px">
-      <ListItem
-        pos="relative"
-        pl="4"
-        pb="6"
-        borderLeft="2px"
-        borderColor="gray.200"
-        _before={{
-          content: `''`,
-          pos: 'absolute',
-          width: '15px',
-          height: '15px',
-          backgroundColor: 'gray.200',
-          borderRadius: '50%',
-          left: -2,
-        }}>
-        <Text fontWeight="semibold">1998</Text>
-        <Text>I was born in Nagano.</Text>
-      </ListItem>
-      <ListItem
-        pos="relative"
-        pl="4"
-        pb="6"
-        borderLeft="2px"
-        borderColor="gray.200"
-        _before={{
-          content: `''`,
-          pos: 'absolute',
-          width: '15px',
-          height: '15px',
-          backgroundColor: 'gray.200',
-          borderRadius: '50%',
-          left: -2,
-        }}>
-        <Text fontWeight="semibold">2021</Text>
-        <Text>I graduated from Nihon University of Economics.</Text>
-      </ListItem>
-      <ListItem
-        pos="relative"
-        pl="4"
-        borderLeft="2px"
-        borderColor="gray.200"
-        _before={{
-          content: `''`,
-          pos: 'absolute',
-          width: '15px',
-          height: '15px',
-          backgroundColor: 'gray.200',
-          borderRadius: '50%',
-          left: -2,
-        }}>
-        <Text fontWeight="semibold">2021</Text>
-        <Text>I joined DIP Corporation.</Text>
-        <Text>I work as a frontend engineer.</Text>
-      </ListItem>
-    </List>
+    <Box as="section" mx="auto" maxW="2xl" px={{base: '4', md: '8'}}>
+      <List>
+        <ListItem pb="2">
+          <Heading as="h3" size="md" fontWeight="semibold">
+            1998
+          </Heading>
+          <Text>I was born in Nagano.I lived until I graduated from high school.</Text>
+        </ListItem>
+        <ListItem pb="2">
+          <Heading as="h3" size="md" fontWeight="semibold">
+            2017
+          </Heading>
+          <Text>Entered Nihon University of Economics.Started learning programming.</Text>
+        </ListItem>
+        <ListItem>
+          <Heading as="h3" size="md" fontWeight="semibold">
+            2021
+          </Heading>
+          <Text>Joined DIP Corporation.I still work as a frontend engineer.</Text>
+        </ListItem>
+      </List>
+    </Box>
   );
 };
 
