@@ -1,6 +1,6 @@
-import {Box, Container, ColorModeScript} from '@chakra-ui/react';
+import {Box, ColorModeScript} from '@chakra-ui/react';
 import {ReactNode} from 'react';
-import HomeHead from '../common/head';
+import HomeHead from './head';
 import Header from './header';
 import Footer from './footer';
 import theme from './../../../lib/theme';
@@ -13,12 +13,12 @@ const Main = ({children, ...props}: Props) => {
   return (
     <Box as="main">
       <HomeHead />
-      <Container maxW="container.md" {...props}>
+      <Box width="100%" height="100vh" margin="0" padding="0" {...props}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Header />
         {children}
         <Footer />
-      </Container>
+      </Box>
     </Box>
   );
 };

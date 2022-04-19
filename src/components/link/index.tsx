@@ -12,7 +12,7 @@ const Links = (props: ButtonGroupProps) => {
         aria-label="GitHub"
         target="_blank"
         rel="noopener noreferrer"
-        icon={<FaGithub fontSize="20px" />}
+        icon={<FaGithub fontSize="25px" />}
       />
       <IconButton
         _focus={{focus: 'none'}}
@@ -21,7 +21,7 @@ const Links = (props: ButtonGroupProps) => {
         aria-label="Twitter"
         target="_blank"
         rel="noopener noreferrer"
-        icon={<FaTwitter fontSize="20px" />}
+        icon={<FaTwitter fontSize="25px" />}
       />
     </ButtonGroup>
   );
