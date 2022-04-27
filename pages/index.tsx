@@ -1,16 +1,20 @@
 import type {NextPage, GetStaticProps} from 'next';
 import * as React from 'react';
-import ProfileSection from '../src/components/profile';
-import BioSection from '../src/components/profile/bio';
-import RecentWork from '../src/components/work/recent';
+import Top from '../src/components/profile/top';
+import ProfileSection from '../src/components/profile/profile';
+import RecentWork from '../src/components/profile/work';
+import Bio from '../src/components/profile/bio';
+import Favorite from '../src/components/profile/favorite';
 import Contact from '../src/components/profile/contact';
 
 const Home: NextPage = () => {
   return (
     <>
+      <Top />
       <ProfileSection />
-      {/* <BioSection /> */}
-      {/* <RecentWork /> */}
+      <Bio />
+      <Favorite />
+      <RecentWork />
       <Contact />
     </>
   );

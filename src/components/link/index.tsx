@@ -22,6 +22,7 @@ const Links = (props: ButtonGroupProps) => {
         target="_blank"
         rel="noopener noreferrer"
         icon={<FaTwitter fontSize="25px" />}
+        style={{color: '#1DA1F2'}}
       />
     </ButtonGroup>
   );

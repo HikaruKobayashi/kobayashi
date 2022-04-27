@@ -16,7 +16,7 @@ const Main = ({children, ...props}: Props) => {
       <Box width="100%" height="100vh" margin="0" padding="0" {...props}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Header />
-        {children}
+        <Box marginTop="14">{children}</Box>
         <Footer />
       </Box>
     </Box>

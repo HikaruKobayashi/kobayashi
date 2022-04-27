@@ -11,7 +11,9 @@ const Footer = () => {
       width="100%"
       py="6"
       textAlign="center"
-      px={{base: '4', md: '8'}}>
+      px={{base: '4', md: '8'}}
+      borderTop="1px"
+      borderColor="gray.300">
       <Links />
       <Box padding="2">
         <Link href="privacy-policy" width="100%" style={{textDecoration: 'none'}}>
