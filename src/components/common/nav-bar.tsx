@@ -1,7 +1,14 @@
 import {IconButton, Menu, MenuButton, MenuList, MenuItem, Link} from '@chakra-ui/react';
 import {HamburgerIcon} from '@chakra-ui/icons';
+import useLocale from './../../../locales/lang';
 
+interface Props {
+  name: string;
+  link: string;
+}
 const Navbar = () => {
+  const lang = useLocale();
+
   return (
     <Menu>
       <MenuButton
@@ -12,24 +19,11 @@ const Navbar = () => {
         variant="outline"
       />
       <MenuList>
-        <MenuItem as={Link} href="#top" style={{textDecoration: 'none'}}>
-          Top
-        </MenuItem>
-        <MenuItem as={Link} href="#profile" style={{textDecoration: 'none'}}>
-          Profile
-        </MenuItem>
-        <MenuItem as={Link} href="#bio" style={{textDecoration: 'none'}}>
-          Bio
-        </MenuItem>
-        <MenuItem as={Link} href="#favorite" style={{textDecoration: 'none'}}>
-          Favorite
-        </MenuItem>
-        <MenuItem as={Link} href="#work" style={{textDecoration: 'none'}}>
-          Work
-        </MenuItem>
-        <MenuItem as={Link} href="#contact" style={{textDecoration: 'none'}}>
-          Contact
-        </MenuItem>
+        {lang.lang.nav.map((item: Props, index: number) => (
+          <MenuItem as={Link} href={'#' + item.link} style={{textDecoration: 'none'}} key={index}>
+            {item.name}
+          </MenuItem>
+        ))}
       </MenuList>
     </Menu>
   );

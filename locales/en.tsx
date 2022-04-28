@@ -1,4 +1,30 @@
 export default {
+  nav: [
+    {
+      name: 'Top',
+      link: 'top',
+    },
+    {
+      name: 'Profile',
+      link: 'profile',
+    },
+    {
+      name: 'Biography',
+      link: 'bio',
+    },
+    {
+      name: 'Favorite',
+      link: 'favorite',
+    },
+    {
+      name: 'Work',
+      link: 'work',
+    },
+    {
+      name: 'Contact',
+      link: 'contact',
+    },
+  ],
   top: {
     subTitle: 'This site is a my portfolio site.',
     btnText: 'View sorce code',

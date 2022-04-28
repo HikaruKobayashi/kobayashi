@@ -1,4 +1,30 @@
 export default {
+  nav: [
+    {
+      name: 'トップ',
+      link: 'top',
+    },
+    {
+      name: 'プロフィール',
+      link: 'profile',
+    },
+    {
+      name: '経歴',
+      link: 'bio',
+    },
+    {
+      name: '趣味',
+      link: 'favorite',
+    },
+    {
+      name: 'ポートフォリオ',
+      link: 'work',
+    },
+    {
+      name: 'お問い合わせ',
+      link: 'contact',
+    },
+  ],
   top: {
     subTitle: '小林のポートフォリオサイトです',
     btnText: 'ソースコードを確認する',
