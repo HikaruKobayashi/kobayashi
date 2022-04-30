@@ -27,7 +27,10 @@ export default {
   ],
   top: {
     subTitle: '小林のポートフォリオサイトです',
-    btnText: 'ソースコードを確認する',
+  },
+  btn: {
+    text: 'ソースコードを確認する',
+    link: 'https://github.com/HikaruKobayashi/kobayashi',
   },
   profile: {
     title: 'プロフィール',

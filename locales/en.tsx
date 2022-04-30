@@ -27,7 +27,10 @@ export default {
   ],
   top: {
     subTitle: 'This site is a my portfolio site.',
-    btnText: 'View sorce code',
+  },
+  btn: {
+    text: 'View sorce code',
+    link: 'https://github.com/HikaruKobayashi/kobayashi',
   },
   profile: {
     title: 'My Profile',

@@ -5,7 +5,7 @@ import ExternalBtn from './external-btn';
 
 const Top = () => {
   const lang = useLocale();
-  const btnText = lang.lang.top.btnText;
+  const btnText = lang.lang.btn;
 
   return (
     <Box as="section" width={{base: '90%', lg: '45%'}} margin="0 auto" py="6" id="top">

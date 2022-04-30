@@ -1,7 +1,10 @@
 import {Box, Link} from '@chakra-ui/react';
 
 interface Props {
-  data: string;
+  data: {
+    text: string;
+    link: string;
+  };
 }
 
 const ExternalBtn = (props: Props) => {
@@ -14,7 +17,7 @@ const ExternalBtn = (props: Props) => {
       borderRadius="30px"
       paddingY="3">
       <Link
-        href="https://github.com/HikaruKobayashi/kobayashi"
+        href={props.data.link}
         target="_blank"
         rel="noopener noreferrer"
         width="50%"
@@ -24,7 +27,7 @@ const ExternalBtn = (props: Props) => {
         style={{
           textDecoration: 'none',
         }}>
-        {props.data}
+        {props.data.text}
       </Link>
     </Box>
   );
