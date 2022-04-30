@@ -13,7 +13,7 @@ const ExternalBtn = (props: Props) => {
       width={{base: '80%', md: '40%'}}
       margin="auto"
       textAlign="center"
-      bgGradient="linear(to-r, #77ABDA, #0E328D)"
+      bgGradient="linear(to-r, #77ABDA, #805AD5)"
       borderRadius="30px"
       paddingY="3">
       <Link
