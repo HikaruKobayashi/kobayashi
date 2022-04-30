@@ -15,11 +15,6 @@ const Footer = () => {
       borderTop="1px"
       borderColor="gray.300">
       <Links />
-      <Box padding="2">
-        <Link href="privacy-policy" width="100%" style={{textDecoration: 'none'}}>
-          Privacy&nbsp;Policy
-        </Link>
-      </Box>
       <Text>&copy;&nbsp;{new Date().getFullYear()}&nbsp;Kobayashi</Text>
     </Box>
   );
