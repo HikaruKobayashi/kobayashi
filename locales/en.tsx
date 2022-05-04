@@ -90,5 +90,7 @@ export default {
     contentError: 'Content is required.',
     contentCaraError: '300 characters or less',
     button: 'Submit',
+    success: 'Thank you for your contact.',
+    failed: 'Sorry, failed to send.',
   },
 };

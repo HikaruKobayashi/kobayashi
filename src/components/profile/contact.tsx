@@ -27,6 +27,7 @@ const Contact = () => {
   const [nameErrorText, setNameErrorText] = useState<string>('');
   const [emailErrorText, setEmailErrorText] = useState<string>('');
   const [contentErrorText, setContentErrorText] = useState<string>('');
+  const [sendStatus, setSendStatus] = useState<boolean>(false);
   const {handleSubmit} = useForm();
 
   const nameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -71,7 +72,8 @@ const Contact = () => {
   };
 
   const sendMsg = async () => {
-    await fetch('/api/send', {
+    setSendStatus(true);
+    const res = await fetch('/api/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -83,6 +85,13 @@ const Contact = () => {
       }),
     });
 
+    if (res.ok) {
+      alert(lang.lang.contact.success);
+    } else {
+      alert(lang.lang.contact.failed);
+    }
+
+    setSendStatus(false);
     setName('');
     setEmail('');
     setContent('');
@@ -150,6 +159,7 @@ const Contact = () => {
         !emailError &&
         !contentError ? (
           <Button
+            isLoading={sendStatus ? true : false}
             leftIcon={<CheckCircleIcon />}
             type="submit"
             colorScheme="green"

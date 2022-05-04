@@ -90,5 +90,7 @@ export default {
     contentError: '内容は必須項目です。',
     contentCaraError: '300文字以下で入力してください。',
     button: '送信',
+    success: 'お問い合わせ頂きありがとうございました。',
+    failed: '申し訳ございません。送信できませんでした。',
   },
 };
