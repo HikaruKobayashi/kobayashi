@@ -13,6 +13,7 @@ import {
 import {CheckCircleIcon} from '@chakra-ui/icons';
 import {WarningIcon} from '@chakra-ui/icons';
 import useLocale from './../../../locales/lang';
+import {useForm} from 'react-hook-form';
 
 const Contact = () => {
   const lang = useLocale();
@@ -26,6 +27,7 @@ const Contact = () => {
   const [nameErrorText, setNameErrorText] = useState<string>('');
   const [emailErrorText, setEmailErrorText] = useState<string>('');
   const [contentErrorText, setContentErrorText] = useState<string>('');
+  const {handleSubmit} = useForm();
 
   const nameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -68,6 +70,24 @@ const Contact = () => {
     }
   };
 
+  const sendMsg = async () => {
+    await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        message: content,
+      }),
+    });
+
+    setName('');
+    setEmail('');
+    setContent('');
+  };
+
   return (
     <Box
       as="section"
@@ -76,75 +96,78 @@ const Contact = () => {
       textAlign="center"
       id="contact">
       <Heading as="h2">{lang.lang.contact.title}</Heading>
-      <FormControl isInvalid={nameError} isRequired>
-        <FormLabel htmlFor="name">{lang.lang.contact.name}</FormLabel>
-        <Input type="name" value={name} onChange={nameChange} />
-        {nameError ? (
-          <Box display="flex" alignItems="center" marginTop="2">
-            <WarningIcon color={colorMode === 'light' ? 'red.500' : 'red.300'} />
-            <FormErrorMessage marginTop="0" marginLeft="1">
-              {nameErrorText}
-            </FormErrorMessage>
-          </Box>
+      <form onSubmit={handleSubmit(sendMsg)}>
+        <FormControl isInvalid={nameError} isRequired>
+          <FormLabel htmlFor="name">{lang.lang.contact.name}</FormLabel>
+          <Input type="name" value={name} onChange={nameChange} />
+          {nameError ? (
+            <Box display="flex" alignItems="center" marginTop="2">
+              <WarningIcon color={colorMode === 'light' ? 'red.500' : 'red.300'} />
+              <FormErrorMessage marginTop="0" marginLeft="1">
+                {nameErrorText}
+              </FormErrorMessage>
+            </Box>
+          ) : (
+            <></>
+          )}
+        </FormControl>
+        <FormControl isInvalid={emailError} isRequired>
+          <FormLabel htmlFor="email" marginTop="2">
+            {lang.lang.contact.email}
+          </FormLabel>
+          <Input id="email" type="email" value={email} onChange={emailChange} />
+          {emailError ? (
+            <Box display="flex" alignItems="center" marginTop="2">
+              <WarningIcon color={colorMode === 'light' ? 'red.500' : 'red.300'} />
+              <FormErrorMessage marginTop="0" marginLeft="1">
+                {emailErrorText}
+              </FormErrorMessage>
+            </Box>
+          ) : (
+            <></>
+          )}
+        </FormControl>
+        <FormControl isInvalid={contentError} isRequired>
+          <FormLabel htmlFor="content" marginTop="2">
+            {lang.lang.contact.content}
+          </FormLabel>
+          <Textarea id="content" type="content" value={content} onChange={contentChange} />
+          {contentError ? (
+            <Box display="flex" alignItems="center" marginTop="2">
+              <WarningIcon color={colorMode === 'light' ? 'red.500' : 'red.300'} />
+              <FormErrorMessage marginTop="0" marginLeft="1">
+                {contentErrorText}
+              </FormErrorMessage>
+            </Box>
+          ) : (
+            <></>
+          )}
+        </FormControl>
+        {name.length != 0 &&
+        email.length != 0 &&
+        content.length != 0 &&
+        !nameError &&
+        !emailError &&
+        !contentError ? (
+          <Button
+            leftIcon={<CheckCircleIcon />}
+            type="submit"
+            colorScheme="green"
+            variant="solid"
+            margin="16px auto">
+            {lang.lang.contact.button}
+          </Button>
         ) : (
-          <></>
+          <Button
+            leftIcon={<WarningIcon />}
+            isDisabled
+            colorScheme="gray"
+            variant="solid"
+            margin="16px auto">
+            {lang.lang.contact.button}
+          </Button>
         )}
-      </FormControl>
-      <FormControl isInvalid={emailError} isRequired>
-        <FormLabel htmlFor="email" marginTop="2">
-          {lang.lang.contact.email}
-        </FormLabel>
-        <Input id="email" type="email" value={email} onChange={emailChange} />
-        {emailError ? (
-          <Box display="flex" alignItems="center" marginTop="2">
-            <WarningIcon color={colorMode === 'light' ? 'red.500' : 'red.300'} />
-            <FormErrorMessage marginTop="0" marginLeft="1">
-              {emailErrorText}
-            </FormErrorMessage>
-          </Box>
-        ) : (
-          <></>
-        )}
-      </FormControl>
-      <FormControl isInvalid={contentError} isRequired>
-        <FormLabel htmlFor="content" marginTop="2">
-          {lang.lang.contact.content}
-        </FormLabel>
-        <Textarea id="content" type="content" value={content} onChange={contentChange} />
-        {contentError ? (
-          <Box display="flex" alignItems="center" marginTop="2">
-            <WarningIcon color={colorMode === 'light' ? 'red.500' : 'red.300'} />
-            <FormErrorMessage marginTop="0" marginLeft="1">
-              {contentErrorText}
-            </FormErrorMessage>
-          </Box>
-        ) : (
-          <></>
-        )}
-      </FormControl>
-      {name.length != 0 &&
-      email.length != 0 &&
-      content.length != 0 &&
-      !nameError &&
-      !emailError &&
-      !contentError ? (
-        <Button
-          leftIcon={<CheckCircleIcon />}
-          colorScheme="green"
-          variant="solid"
-          margin="16px auto">
-          {lang.lang.contact.button}
-        </Button>
-      ) : (
-        <Button
-          leftIcon={<WarningIcon />}
-          isDisabled
-          colorScheme="gray"
-          variant="solid"
-          margin="16px auto">
-          {lang.lang.contact.button}
-        </Button>
-      )}
+      </form>
     </Box>
   );
 };
