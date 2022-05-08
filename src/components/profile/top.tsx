@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Heading, Box, Text, Image, Stack} from '@chakra-ui/react';
 import useLocale from './../../../locales/lang';
-import ExternalBtn from './external-btn';
+import ExternalBtn from '../common/external-btn';
 
 const Top = () => {
   const lang = useLocale();
