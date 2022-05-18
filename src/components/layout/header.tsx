@@ -16,7 +16,8 @@ const Header = () => {
       py="2"
       px={{base: '4', md: '8'}}
       borderBottom="1px"
-      borderColor="gray.300">
+      borderColor="gray.300"
+      style={{zIndex: 3}}>
       <Stack direction="row" spacing="4" align="center" justify="space-between">
         <Link href="/" style={{textDecoration: 'none'}}>
           Kobayashi

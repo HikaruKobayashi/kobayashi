@@ -103,7 +103,7 @@ const Contact = () => {
       width={{base: '90%', lg: '30%'}}
       margin="0 auto"
       textAlign="center"
-      id="contact">
+      data-title={lang.lang.contact.title}>
       <Heading as="h2">{lang.lang.contact.title}</Heading>
       <form onSubmit={handleSubmit(sendMsg)}>
         <FormControl isInvalid={nameError} isRequired>

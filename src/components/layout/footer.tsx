@@ -1,6 +1,6 @@
-import {Box, Text, Link} from '@chakra-ui/react';
+import {Box, Text} from '@chakra-ui/react';
 import * as React from 'react';
-import Links from '../link/index';
+import Links from '../common/social-link';
 
 const Footer = () => {
   return (

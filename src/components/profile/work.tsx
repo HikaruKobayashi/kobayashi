@@ -6,7 +6,12 @@ const Work = () => {
   const lang = useLocale();
 
   return (
-    <Box as="section" mx="auto" width={{base: '90%', lg: '45%'}} py="6" id="work">
+    <Box
+      as="section"
+      mx="auto"
+      width={{base: '90%', lg: '45%'}}
+      py="6"
+      data-title={lang.lang.works.title}>
       <Heading as="h2" size="xl" marginBottom="4">
         {lang.lang.works.title}
       </Heading>

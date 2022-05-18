@@ -8,7 +8,12 @@ const Top = () => {
   const btnText = lang.lang.btn;
 
   return (
-    <Box as="section" width={{base: '90%', lg: '45%'}} margin="0 auto" py="6" id="top">
+    <Box
+      as="section"
+      width={{base: '90%', lg: '45%'}}
+      margin="0 auto"
+      py="6"
+      data-title={lang.lang.top.data}>
       <Stack direction="row" align="center" justify="center">
         <Heading as="h1" fontSize={{base: '4xl', lg: '5xl'}} textAlign="center">
           Hikaru

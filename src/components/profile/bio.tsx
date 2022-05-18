@@ -2,11 +2,22 @@ import * as React from 'react';
 import {Heading, Box, TableContainer, Table, Thead, Tr, Th, Tbody, Td} from '@chakra-ui/react';
 import useLocale from '../../../locales/lang';
 
+interface Props {
+  name: string;
+  period: string;
+  occupation: string;
+  skill: string;
+}
 const Bio = () => {
   const lang = useLocale();
 
   return (
-    <Box as="section" width={{base: '90%', lg: '45%'}} margin="0 auto" py="6" id="bio">
+    <Box
+      as="section"
+      width={{base: '90%', lg: '45%'}}
+      margin="0 auto"
+      py="6"
+      data-title={lang.lang.bio.title}>
       <Heading as="h2" size="xl" marginBottom="4">
         {lang.lang.bio.title}
       </Heading>
@@ -15,23 +26,22 @@ const Bio = () => {
           <Table variant="simple">
             <Thead>
               <Tr>
-                <Th>{lang.lang.bio.table.company}</Th>
-                <Th>{lang.lang.bio.table.period}</Th>
-                <Th>{lang.lang.bio.table.occupation}</Th>
-                <Th>{lang.lang.bio.table.skill}</Th>
+                {lang.lang.bio.table.map((item: string, index: number) => (
+                  <Th key={index}>{item}</Th>
+                ))}
               </Tr>
             </Thead>
             <Tbody>
-              <Tr>
-                <Td>{lang.lang.bio.dip.name}</Td>
-                <Td>{lang.lang.bio.dip.period}</Td>
-                <Td>{lang.lang.bio.dip.occupation}</Td>
-                <Td>
-                  HTML5, CSS3, DartSass
-                  <br />
-                  JavaScript, jQuery, Vue.js, gulp
-                </Td>
-              </Tr>
+              {lang.lang.bio.company.map((item: Props, index: number) => {
+                return (
+                  <Tr key={index}>
+                    <Td>{item.name}</Td>
+                    <Td>{item.period}</Td>
+                    <Td>{item.occupation}</Td>
+                    <Td>{item.skill}</Td>
+                  </Tr>
+                );
+              })}
             </Tbody>
           </Table>
         </TableContainer>
