@@ -1,71 +1,46 @@
 export default {
-  nav: [
-    {
-      name: 'Top',
-      link: 'top',
-    },
-    {
-      name: 'Profile',
-      link: 'profile',
-    },
-    {
-      name: 'Biography',
-      link: 'bio',
-    },
-    {
-      name: 'Favorite',
-      link: 'favorite',
-    },
-    {
-      name: 'Work',
-      link: 'work',
-    },
-    {
-      name: 'Contact',
-      link: 'contact',
-    },
-  ],
-  top: {
-    subTitle: 'This site is a my portfolio site.',
-  },
+  nav: ['Top', 'Profile', 'Biography', 'Favorite', 'Private Works', 'Contact'],
   btn: {
     text: 'View sorce code',
     link: 'https://github.com/HikaruKobayashi/kobayashi',
   },
+  top: {
+    data: 'Top',
+    subTitle: 'Welcome to my portfolio site.',
+  },
   profile: {
-    title: 'My Profile',
-    text: 'I am a frontend engineer working in Tokyo. I work at DIP Corporation as a frontend engineer, and I am doing personal development. I am developing native apps outside of work.',
+    title: 'Profile',
+    content:
+      'I am a frontend engineer working in Tokyo. I work at DIP Corporation as a frontend engineer, and I am doing personal development. I am developing native apps outside of work.',
   },
-  fav: {
+  favorite: {
     title: 'Favorite',
+    items: [
+      {
+        icon: '🏊🏽',
+        content: 'I have loved swimming since I was a kid.',
+      },
+      {
+        icon: '🎥',
+        content: 'I spend my holidays watching movies.',
+      },
+      {
+        icon: '🎸',
+        content: 'I like listening to the music and playing guitar.',
+      },
+    ],
   },
-  favs: [
-    {
-      icon: '🏊🏽',
-      content: 'I have loved swimming since I was a kid.',
-    },
-    {
-      icon: '🎥',
-      content: 'I spend my holidays watching movies.',
-    },
-    {
-      icon: '🎸',
-      content: 'I like listening to the music and playing guitar.',
-    },
-  ],
   bio: {
     title: 'Biography',
-    table: {
-      company: 'Company',
-      period: 'Period',
-      occupation: 'Occupation',
-      skill: 'Skill',
-    },
-    dip: {
-      name: 'DIP Corporation',
-      period: '2021~current',
-      occupation: 'Frontend Engineer',
-    },
+    table: ['Company', 'Period', 'Occupation', 'Skill'],
+    company: [
+      {
+        name: 'DIP Corporation',
+        period: '2021~current',
+        occupation: 'Frontend Engineer',
+        skill: 'HTML5, CSS3, DartSass,JavaScript, jQuery, Vue.js, gulp',
+      },
+    ],
   },
   works: {
     title: 'Private Works',
