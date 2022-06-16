@@ -16,7 +16,7 @@ const Bio = () => {
       as="section"
       width={{base: '90%', lg: '45%'}}
       margin="0 auto"
-      py="6"
+      pt="6"
       data-title={lang.lang.bio.title}>
       <Heading as="h2" size="xl" marginBottom="4">
         {lang.lang.bio.title}

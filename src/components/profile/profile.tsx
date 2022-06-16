@@ -10,6 +10,7 @@ const Profile = () => {
       as="section"
       width={{base: '90%', lg: '45%'}}
       margin="0 auto"
+      pt="6"
       data-title={lang.lang.profile.title}>
       <Box display={{md: 'flex'}}>
         <Box>

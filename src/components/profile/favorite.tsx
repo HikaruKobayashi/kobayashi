@@ -14,6 +14,7 @@ const Favorite = () => {
     <Box
       as="section"
       width={{base: '90%', lg: '45%'}}
+      pt="6"
       margin="0 auto"
       data-title={lang.lang.favorite.title}>
       <Heading as="h2" size="xl" marginBottom="4" isTruncated>

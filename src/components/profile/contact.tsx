@@ -102,6 +102,7 @@ const Contact = () => {
       as="section"
       width={{base: '90%', lg: '30%'}}
       margin="0 auto"
+      pt="6"
       textAlign="center"
       data-title={lang.lang.contact.title}>
       <Heading as="h2">{lang.lang.contact.title}</Heading>

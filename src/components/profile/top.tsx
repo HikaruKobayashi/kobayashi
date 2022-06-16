@@ -12,7 +12,7 @@ const Top = () => {
       as="section"
       width={{base: '90%', lg: '45%'}}
       margin="0 auto"
-      py="6"
+      pt="6"
       data-title={lang.lang.top.data}>
       <Stack direction="row" align="center" justify="center">
         <Heading as="h1" fontSize={{base: '4xl', lg: '5xl'}} textAlign="center">

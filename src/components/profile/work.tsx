@@ -10,7 +10,7 @@ const Work = () => {
       as="section"
       mx="auto"
       width={{base: '90%', lg: '45%'}}
-      py="6"
+      pt="6"
       data-title={lang.lang.works.title}>
       <Heading as="h2" size="xl" marginBottom="4">
         {lang.lang.works.title}
