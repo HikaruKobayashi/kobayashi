@@ -38,7 +38,7 @@ export default {
         name: 'DIP Corporation',
         period: '2021~current',
         occupation: 'Frontend Engineer',
-        skill: 'HTML5, CSS3, DartSass,JavaScript, jQuery, Vue.js, gulp',
+        skill: 'HTML5, CSS3, DartSass,JavaScript, jQuery, Vue.js, Docker, gulp',
       },
     ],
   },

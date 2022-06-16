@@ -38,7 +38,7 @@ export default {
         name: 'ディップ株式会社',
         period: '2021年~現在',
         occupation: 'フロントエンドエンジニア',
-        skill: 'HTML5, CSS3, DartSass, JavaScript, jQuery, Vue.js, gulp',
+        skill: 'HTML5, CSS3, DartSass, JavaScript, jQuery, Vue.js, Docker, gulp',
       },
     ],
   },
