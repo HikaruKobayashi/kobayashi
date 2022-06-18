@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const smoothScroll = (item: string) => {
     const target: HTMLElement | null = document.querySelector('[data-title="' + item + '"]')!;
-    const position = target.getBoundingClientRect().top + window.pageYOffset - 57;
+    const position = target.getBoundingClientRect().top + window.pageYOffset - 50;
     window.scrollTo({
       left: 0,
       top: position,
