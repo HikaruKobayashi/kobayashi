@@ -1,9 +1,10 @@
 import * as React from 'react';
-import {Heading, Box, Text, Image, Link} from '@chakra-ui/react';
+import {Heading, Box, Text, Image, Link, useColorMode} from '@chakra-ui/react';
 import useLocale from '../../../locales/lang';
 
 const Work = () => {
   const lang = useLocale();
+  const {colorMode} = useColorMode();
 
   return (
     <Box
@@ -33,7 +34,9 @@ const Work = () => {
               borderWidth="1px"
               borderRadius="10px"
               boxShadow="base"
-              margin="auto">
+              margin="auto"
+              backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}
+            >
               <Image
                 src="./images/cafe-sampo.png"
                 width="90px"
@@ -60,7 +63,9 @@ const Work = () => {
               borderRadius="10px"
               boxShadow="base"
               align="center"
-              margin="auto">
+              margin="auto"
+              backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}
+            >
               <Box width="100px" margin="auto" py="12">
                 <Text> {lang.lang.works.kobanote.name}</Text>
               </Box>

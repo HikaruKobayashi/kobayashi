@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Heading, Box, TableContainer, Table, Thead, Tr, Th, Tbody, Td} from '@chakra-ui/react';
+import {Heading, Box, TableContainer, Table, Thead, Tr, Th, Tbody, Td, useColorMode} from '@chakra-ui/react';
 import useLocale from '../../../locales/lang';
 
 interface Props {
@@ -10,6 +10,7 @@ interface Props {
 }
 const Bio = () => {
   const lang = useLocale();
+  const {colorMode} = useColorMode();
 
   return (
     <Box
@@ -22,7 +23,7 @@ const Bio = () => {
         {lang.lang.bio.title}
       </Heading>
       <Box borderWidth="1px" borderRadius="10px" boxShadow="base">
-        <TableContainer>
+        <TableContainer backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}>
           <Table variant="simple">
             <Thead>
               <Tr>
