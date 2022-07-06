@@ -9,6 +9,7 @@ const HomeHead = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="author" content="Kobayashi" />
       <meta name="description" content="Kobayashi's Homepage" />
+      <meta property="og:image" content="https://www.h-kobayashi.tokyo/images/cafe.jpg" />
       <meta property="og:site_name" content="Kobayashi's Homepage" />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="ja_JP" />
