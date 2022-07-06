@@ -109,7 +109,12 @@ const Contact = () => {
       <form onSubmit={handleSubmit(sendMsg)}>
         <FormControl isInvalid={nameError} isRequired>
           <FormLabel htmlFor="name">{lang.lang.contact.name}</FormLabel>
-          <Input type="name" value={name} onChange={nameChange} backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'} />
+          <Input
+            type="name"
+            value={name}
+            onChange={nameChange}
+            backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}
+          />
           {nameError ? (
             <Box display="flex" alignItems="center" marginTop="2">
               <WarningIcon color={colorMode === 'light' ? 'red.500' : 'red.300'} />
@@ -125,7 +130,13 @@ const Contact = () => {
           <FormLabel htmlFor="email" marginTop="2">
             {lang.lang.contact.email}
           </FormLabel>
-          <Input id="email" type="email" value={email} onChange={emailChange} backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'} />
+          <Input
+            id="email"
+            type="email"
+            value={email}
+            onChange={emailChange}
+            backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}
+          />
           {emailError ? (
             <Box display="flex" alignItems="center" marginTop="2">
               <WarningIcon color={colorMode === 'light' ? 'red.500' : 'red.300'} />
@@ -141,7 +152,12 @@ const Contact = () => {
           <FormLabel htmlFor="content" marginTop="2">
             {lang.lang.contact.content}
           </FormLabel>
-          <Textarea id="content" type="content" value={content} onChange={contentChange} backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'} />
+          <Textarea
+            id="content"
+            value={content}
+            onChange={contentChange}
+            backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}
+          />
           {contentError ? (
             <Box display="flex" alignItems="center" marginTop="2">
               <WarningIcon color={colorMode === 'light' ? 'red.500' : 'red.300'} />
