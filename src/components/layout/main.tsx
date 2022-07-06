@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import {useEffect, useState, useRef} from 'react';
 import {Box, ColorModeScript} from '@chakra-ui/react';
 import {ReactNode} from 'react';
 import HomeHead from './head';
@@ -18,29 +18,39 @@ const Main = ({children, ...props}: Props) => {
 
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(NET({
-        el: netRef.current,
-        quantity: 2.00,
-        birdSize: 1,
-        mouseControls: false,
-        touchControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        backgroundAlpha: 0.0,
-        THREE: THREE,
-      }));
+      setVantaEffect(
+        NET({
+          el: netRef.current,
+          quantity: 2.0,
+          birdSize: 1,
+          mouseControls: false,
+          touchControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          backgroundAlpha: 0.0,
+          THREE: THREE,
+        }),
+      );
     }
     return () => {
       if (vantaEffect) vantaEffect.destroy();
-    }
-  }, [vantaEffect])
+    };
+  }, [vantaEffect]);
 
   return (
     <Box as="main">
       <HomeHead />
-      <Box width="100%" height="100%" position="fixed" zIndex="-1" margin="0" padding="0" ref={netRef} />
+      <Box
+        width="100%"
+        height="100%"
+        position="fixed"
+        zIndex="-1"
+        margin="0"
+        padding="0"
+        ref={netRef}
+      />
       <Box width="100%" height="100%" margin="0" padding="0" {...props}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Header />

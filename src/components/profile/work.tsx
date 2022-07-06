@@ -35,8 +35,7 @@ const Work = () => {
               borderRadius="10px"
               boxShadow="base"
               margin="auto"
-              backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}
-            >
+              backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}>
               <Image
                 src="./images/cafe-sampo.png"
                 width="90px"
@@ -62,10 +61,9 @@ const Work = () => {
               borderWidth="1px"
               borderRadius="10px"
               boxShadow="base"
-              align="center"
+              textAlign="center"
               margin="auto"
-              backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}
-            >
+              backgroundColor={colorMode === 'light' ? '#fff' : '#1A202B'}>
               <Box width="100px" margin="auto" py="12">
                 <Text> {lang.lang.works.kobanote.name}</Text>
               </Box>

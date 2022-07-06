@@ -1,5 +1,16 @@
 import * as React from 'react';
-import {Heading, Box, TableContainer, Table, Thead, Tr, Th, Tbody, Td, useColorMode} from '@chakra-ui/react';
+import {
+  Heading,
+  Box,
+  TableContainer,
+  Table,
+  Thead,
+  Tr,
+  Th,
+  Tbody,
+  Td,
+  useColorMode,
+} from '@chakra-ui/react';
 import useLocale from '../../../locales/lang';
 
 interface Props {
